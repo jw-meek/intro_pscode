@@ -2,3 +2,36 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+// initialize variables
+SET numberToGuess to a random number between 1 and 0
+SET numberOfAtempts to 3
+
+// show a welcome message
+PRINT "Welcome to the Guess the number game!"
+PRINT "You have 3 attempts to guess the random number between 1 and 10."
+
+// Main game loop
+WHILE attempts > 0 DO
+  // Ask player to guess a number between 1 and 10.
+  PRINT "Enter your guess for a number between 1 and 10:"
+  LET playerGuess = READ input (converted to a number)
+
+  // Check if players guess is correct
+  IF playerGuess === numberToGuess THEN
+    PRINT "Congratulations! You guessed the number!"
+    EXIT loop
+  END IF 
+
+  // Decrease the number of attempts
+  attempts = attempts - 1
+
+  // Display attempts remaining.
+  IF attempts > 0 THEN
+    PRINT "You have " + attempts + "attempts left."
+  ELSE
+END WHILE
+
+// End of game
+PRINT "Game over."
+
+
