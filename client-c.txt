@@ -2,3 +2,17 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+// Initialize variables to hold values.
+SET totalPackages = 50 // Maximum number of products per case.
+SET packageSize = 2    // Each scan will count for 2 products.
+SET scannedProducts   //  Start with 0 products scanned.
+
+// Print message to screen.
+PRINT "Starting to scan and count packages."
+
+FOR scannedProducts FROM 2 TO totalPackages STEP packageSize
+  PRINT "Scanned " + scannedProducts + " products."
+END FOR
+
+// Display message when complete.
+PRINT "All 50 products have been scanned and sorted for boxing."
