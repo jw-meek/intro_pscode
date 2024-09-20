@@ -2,3 +2,36 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+// Set the starting position and destination.
+SET currentPositionX = 0 // Customers starting X position.
+SET currentPositionY = 0 // Customers starting Y position.
+SET destinationX = 5     // Target X position in the store.
+SET destinationY = 7    //  Target Y position in store.
+
+// Display a welcome message.
+PRINT "Welcome! Lets get started to find your destination."
+
+// Main loop to help guide customer to there destination.
+WHILE currentPositionX != destinationX OR currentPositionY != destinationY
+  IF currentPositionX < destinationX THEN
+    PRINT "Move east."
+    currentPositionX = currentPositionX + 1
+  ELSE IF currentPositionX > destinationX THEN
+    PRINT "Move west."
+    currentPositionX = currentPositionX - 1
+  END IF
+
+  IF currentPositionY < destinationY THEN
+   PRINT "Move north."
+   currentPositionY = currentPositionY + 1
+  ELSE IF currentPositionY > destinationY THEN
+    PRINT "Move south."
+    currentPositionY = currentPositionY - 1
+  END IF
+
+  // Display to customer there current updated position in store.
+  PRINT "Your current position is ("+ currentPositionX + ","+ currentPositionY + ")"
+END WHILE
+
+//Display congragulations to customer for finding there destination in store.
+PRINT "Congratulations! You have found your destination."
